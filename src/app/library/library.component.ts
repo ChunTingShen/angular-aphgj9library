@@ -42,7 +42,7 @@ export class LibraryComponent implements OnInit {
     this.selectedBook.all_authors = select.all_authors;
   }
 
-  onSearch() {
+  onSearch() {  // not in use (older version without pipe)
     let searchWords = this.searchText.toLocaleLowerCase();
 
     this.book.getBooks().subscribe((res: BooksObj) => {
