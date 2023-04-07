@@ -11,12 +11,7 @@
 
 <div class="searchBox">
   Search:
-  <input
-    type="text"
-    placeholder="search input"
-    (keyup)="onSearch()"
-    [(ngModel)]="searchText"
-  />
+  <input type="text" placeholder="search input" [(ngModel)]="searchText" />
 </div>
 
 <div class="resultsBox">
@@ -39,7 +34,7 @@
 </div>
 
 <!-- 
-old version without pipe
+Older version without pipe
 <div class="resultsBox">
   <div
     class="bookResult"
