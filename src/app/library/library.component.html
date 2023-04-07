@@ -22,7 +22,7 @@
 <div class="resultsBox">
   <div
     class="bookResult"
-    *ngFor="let item of booksArray"
+    *ngFor="let item of booksArray | filter: searchText"
     (click)="onSelect(item)"
     [ngStyle]="{
       'border-color': selectedBook.title === item.title ? 'red' : 'black'
@@ -37,3 +37,24 @@
     </div>
   </div>
 </div>
+
+<!-- 
+old version without pipe
+<div class="resultsBox">
+  <div
+    class="bookResult"
+    *ngFor="let item of booksArray"
+    (click)="onSelect(item)"
+    [ngStyle]="{
+      'border-color': selectedBook.title === item.title ? 'red' : 'black'
+    }"
+  >
+    <div class="bookName">
+      <b>{{ item.title }}</b>
+    </div>
+
+    <div class="bookAuthors" *ngFor="let author of item.authors">
+      {{ author.name }}
+    </div>
+  </div>
+</div> -->

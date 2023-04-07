@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { LibraryComponent } from './library/library.component';
 import { BookService } from './book.service';
-
+import { FilterPipe } from './library/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -23,7 +23,7 @@ import {
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  declarations: [AppComponent, LibraryComponent],
+  declarations: [AppComponent, LibraryComponent, FilterPipe],
   providers: [BookService],
   bootstrap: [AppComponent],
 })
